@@ -1,0 +1,7 @@
+{
+  "name": "MCQ-Paper",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
