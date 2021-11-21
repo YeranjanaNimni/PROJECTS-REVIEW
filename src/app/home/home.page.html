@@ -9,12 +9,28 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">MCQ Paper</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="paper">
+    <div class="question01">
+      <ion-grid id="single-select">
+        <ion-row>
+          <div>
+            1) If 5x plus 32 equals 4 minus 2x what is the value of x ? 
+          </div>
+        </ion-row>
+        <ion-row>
+          <ion-col *ngFor="let item of q1Answers;">
+            <div class="single-answer" (click)="selectedAnswer(item.index)">
+              <button id={{item.index}}>
+                {{item.index}} ) {{item.value}}
+              </button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
   </div>
 </ion-content>
